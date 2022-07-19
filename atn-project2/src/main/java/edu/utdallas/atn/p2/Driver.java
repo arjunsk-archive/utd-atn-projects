@@ -5,8 +5,8 @@ import edu.utdallas.atn.p2.core.a_param_gen.ParameterGenerator;
 import edu.utdallas.atn.p2.core.b_algos.HeuristicsAlgo1;
 import edu.utdallas.atn.p2.core.b_algos.HeuristicsAlgo2;
 import edu.utdallas.atn.p2.core.c_visualize.GeoJsonSerializer;
-import edu.utdallas.atn.p2.utils.Point;
-import edu.utdallas.atn.p2.utils.Topology;
+import edu.utdallas.atn.p2.domain.Point;
+import edu.utdallas.atn.p2.domain.Topology;
 
 import java.util.List;
 import java.util.Scanner;

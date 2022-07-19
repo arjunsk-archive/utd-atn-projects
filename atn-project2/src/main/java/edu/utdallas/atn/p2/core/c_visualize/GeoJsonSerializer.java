@@ -2,9 +2,9 @@ package edu.utdallas.atn.p2.core.c_visualize;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import edu.utdallas.atn.p2.utils.Edge;
-import edu.utdallas.atn.p2.utils.Point;
-import edu.utdallas.atn.p2.utils.Topology;
+import edu.utdallas.atn.p2.domain.Edge;
+import edu.utdallas.atn.p2.domain.Point;
+import edu.utdallas.atn.p2.domain.Topology;
 import org.geojson.Feature;
 import org.geojson.FeatureCollection;
 import org.geojson.LineString;

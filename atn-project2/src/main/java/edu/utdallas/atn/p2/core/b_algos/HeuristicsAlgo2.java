@@ -1,7 +1,7 @@
 package edu.utdallas.atn.p2.core.b_algos;
 
-import edu.utdallas.atn.p2.utils.Point;
-import edu.utdallas.atn.p2.utils.Topology;
+import edu.utdallas.atn.p2.domain.Point;
+import edu.utdallas.atn.p2.domain.Topology;
 
 import java.util.List;
 
