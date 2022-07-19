@@ -26,20 +26,17 @@ public class HeuristicsAlgo1 {
 
     int numberOfEdgeRemovals = 0;
     while (!edgesPq.isEmpty()) {
-      numberOfEdgeRemovals++;
-      // Copy original graph
-      Graph oldGraph = new Graph(this.graph);
 
       Edge largestDistanceEdge = edgesPq.poll();
-      assert largestDistanceEdge != null;
-      this.graph.removeEdge(largestDistanceEdge);
+      Graph newGraph = new Graph(this.graph);
+      newGraph.removeEdge(largestDistanceEdge);
 
-      if (this.graph.getDiameter() > 4 || this.graph.getSmallestDegree() < 3) {
-        this.graph = oldGraph;
-        break;
-      }
+      if (!newGraph.getDiameter().isPresent()
+          || newGraph.getDiameter().get() > 4
+          || newGraph.getSmallestDegree() < 3) break;
 
-      this.graph = oldGraph;
+      numberOfEdgeRemovals++;
+      this.graph = newGraph;
     }
 
     System.out.println(numberOfEdgeRemovals);

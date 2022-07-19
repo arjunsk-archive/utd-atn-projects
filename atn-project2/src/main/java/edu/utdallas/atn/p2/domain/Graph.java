@@ -55,20 +55,24 @@ public class Graph {
     int minDegree = Integer.MAX_VALUE;
     for (int r = 0; r < n; r++) {
       int degree = 0;
-      for (int c = 0; c < n; c++) if (connectivityAdjMatrix[r][c]) degree++;
+      for (int c = 0; c < n; c++) {
+        if (r == c) continue;
+        if (connectivityAdjMatrix[r][c]) degree++;
+      }
       minDegree = Math.min(degree, minDegree);
     }
     return minDegree;
   }
 
-  public int getDiameter() {
+  public Optional<Integer> getDiameter() {
 
     // 1. create adjMatrix
     int[][] adjMatrix = new int[n][n];
     for (int r = 0; r < n; r++)
       for (int c = 0; c < n; c++) {
-        if (connectivityAdjMatrix[r][c]) adjMatrix[r][c] = 1;
-        else adjMatrix[r][c] = Integer.MAX_VALUE;
+        if (r == c) adjMatrix[r][c] = 0;
+        else if (connectivityAdjMatrix[r][c]) adjMatrix[r][c] = 1;
+        else adjMatrix[r][c] = 1000;
       }
 
     // 2. run floyd-warshall to get the max hop-count from a vertex to every other vertex.
@@ -84,11 +88,17 @@ public class Graph {
     int largestHopDistance = 0;
     for (int r = 0; r < n; r++) {
       for (int c = 0; c < n; c++) {
+
+        // Checks if all the nodes are connected in the graph.
+        // If not, there is no point in getting the largest Hop Distance.
+        if (adjMatrix[r][c] >= 1000) return Optional.empty();
+
+        // finding the maximum
         largestHopDistance = Math.max(largestHopDistance, adjMatrix[r][c]);
       }
     }
 
-    return largestHopDistance;
+    return Optional.of(largestHopDistance);
   }
 
   public List<Point> getCoordinates() {

@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f361530c-8411-41af-922f-5bd634bcfd11" name="Changes" comment="package name refactor">
+    <list default="true" id="f361530c-8411-41af-922f-5bd634bcfd11" name="Changes" comment="HeuristicsAlgo1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/a_param_gen/ParameterGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/a_param_gen/ParameterGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/c_visualize/GeoJsonSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/c_visualize/GeoJsonSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/domain/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/domain/Edge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/domain/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/domain/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/domain/Topology.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/domain/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/domain/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/domain/Graph.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +139,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658207379416</updated>
-      <workItem from="1658207380722" duration="14198000" />
+      <workItem from="1658207380722" duration="15821000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1658207703258</created>
@@ -216,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658213316630</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="HeuristicsAlgo1">
+      <created>1658257634572</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1658257634572</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +240,8 @@
     <MESSAGE value="Added GeoJson" />
     <MESSAGE value="Refactored Point, Edge" />
     <MESSAGE value="package name refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="package name refactor" />
+    <MESSAGE value="HeuristicsAlgo1" />
+    <option name="LAST_COMMIT_MESSAGE" value="HeuristicsAlgo1" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
