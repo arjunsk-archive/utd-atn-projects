@@ -1,10 +1,10 @@
-package edu.utdallas.atn.core.c_visualize;
+package edu.utdallas.atn.p2.core.c_visualize;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import edu.utdallas.atn.utils.Edge;
-import edu.utdallas.atn.utils.Point;
-import edu.utdallas.atn.utils.Topology;
+import edu.utdallas.atn.p2.utils.Edge;
+import edu.utdallas.atn.p2.utils.Point;
+import edu.utdallas.atn.p2.utils.Topology;
 import org.geojson.Feature;
 import org.geojson.FeatureCollection;
 import org.geojson.LineString;
@@ -36,7 +36,7 @@ public class GeoJsonSerializer {
 
     for (Point point : this.points) {
       Feature _point = new Feature();
-      _point.setGeometry(new org.geojson.Point(point.getX(), point.getY()));
+      _point.setGeometry(new org.geojson.Point(point.getLat(), point.getLng()));
       featureCollection.add(_point);
     }
 
@@ -47,7 +47,7 @@ public class GeoJsonSerializer {
 
       _line.setGeometry(
           new LineString(
-              new LngLatAlt(start.getX(), start.getY()), new LngLatAlt(end.getX(), end.getY())));
+              new LngLatAlt(start.getLat(), start.getLng()), new LngLatAlt(end.getLat(), end.getLng())));
 
       featureCollection.add(_line);
     }

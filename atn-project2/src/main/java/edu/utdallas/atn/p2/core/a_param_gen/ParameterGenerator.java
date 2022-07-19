@@ -1,6 +1,6 @@
-package edu.utdallas.atn.core.a_param_gen;
+package edu.utdallas.atn.p2.core.a_param_gen;
 
-import edu.utdallas.atn.utils.Point;
+import edu.utdallas.atn.p2.utils.Point;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package edu.utdallas.atn.utils;
+package edu.utdallas.atn.p2.utils;
 
 public class Edge {
   Point start;

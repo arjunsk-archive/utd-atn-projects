@@ -1,12 +1,12 @@
-package edu.utdallas.atn;
+package edu.utdallas.atn.p2;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import edu.utdallas.atn.core.a_param_gen.ParameterGenerator;
-import edu.utdallas.atn.core.b_algos.HeuristicsAlgo1;
-import edu.utdallas.atn.core.b_algos.HeuristicsAlgo2;
-import edu.utdallas.atn.core.c_visualize.GeoJsonSerializer;
-import edu.utdallas.atn.utils.Point;
-import edu.utdallas.atn.utils.Topology;
+import edu.utdallas.atn.p2.core.a_param_gen.ParameterGenerator;
+import edu.utdallas.atn.p2.core.b_algos.HeuristicsAlgo1;
+import edu.utdallas.atn.p2.core.b_algos.HeuristicsAlgo2;
+import edu.utdallas.atn.p2.core.c_visualize.GeoJsonSerializer;
+import edu.utdallas.atn.p2.utils.Point;
+import edu.utdallas.atn.p2.utils.Topology;
 
 import java.util.List;
 import java.util.Scanner;
