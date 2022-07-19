@@ -20,20 +20,20 @@ public class ParameterGenerator {
     this.nodeCount = nodeCount;
   }
 
-  public List<Pair<Double, Double>> generateNodes() {
+  public List<Pair<Double, Double>> generateCoordinates() {
 
     List<Pair<Double, Double>> coordinates = new ArrayList<>();
 
     for (int i = 0; i < nodeCount; i++) {
-      double x = getRandomPoint(LAT_MIN, LAT_MAX);
-      double y = getRandomPoint(LNG_MIN, LNG_MAX);
+      double x = getRandomCoordinate(LAT_MIN, LAT_MAX);
+      double y = getRandomCoordinate(LNG_MIN, LNG_MAX);
       coordinates.add(new Pair<>(x, y));
     }
 
     return coordinates;
   }
 
-  private double getRandomPoint(double min, double max) {
+  private double getRandomCoordinate(double min, double max) {
     return ThreadLocalRandom.current().nextDouble(min, max);
   }
 }

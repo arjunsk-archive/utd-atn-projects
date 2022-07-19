@@ -3,8 +3,10 @@ package edu.utdallas.atn.core.c_visualize;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.utdallas.atn.utils.Pair;
+import edu.utdallas.atn.utils.Topology;
 import org.geojson.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GeoJsonSerializer {
@@ -12,27 +14,18 @@ public class GeoJsonSerializer {
   private final List<Pair<Double, Double>> points;
   private final List<Pair<Pair<Double, Double>, Pair<Double, Double>>> edges;
 
-  public static void main(String[] args) throws JsonProcessingException {
-    FeatureCollection featureCollection = new FeatureCollection();
+  public GeoJsonSerializer(List<Pair<Double, Double>> coordinates) {
+    this(coordinates, new ArrayList<>());
+  }
 
-    Feature point1 = new Feature();
-    point1.setGeometry(new Point(101.2471, 37.2368));
-
-    Feature line1 = new Feature();
-    line1.setGeometry(
-        new LineString(new LngLatAlt(32.123, 24.587), new LngLatAlt(36.1478, 29.3645)));
-
-    featureCollection.add(point1);
-    featureCollection.add(line1);
-
-    String json = new ObjectMapper().writeValueAsString(featureCollection);
-    System.out.println(json);
+  public GeoJsonSerializer(Topology topology) {
+    this(topology.getCoordinates(), topology.getEdges());
   }
 
   public GeoJsonSerializer(
-      List<Pair<Double, Double>> points,
+      List<Pair<Double, Double>> coordinates,
       List<Pair<Pair<Double, Double>, Pair<Double, Double>>> edges) {
-    this.points = points;
+    this.points = coordinates;
     this.edges = edges;
   }
 
