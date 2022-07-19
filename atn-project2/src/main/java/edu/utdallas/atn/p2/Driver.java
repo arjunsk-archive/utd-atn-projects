@@ -16,7 +16,7 @@ public class Driver {
     // 1. Input Generation
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter N");
-    int n = 4; // sc.nextInt();
+    int n = 35; // sc.nextInt();
 
     ParameterGenerator pg = new ParameterGenerator(n);
     Map<Point, Integer> coordinates = pg.generateCoordinates();

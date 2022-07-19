@@ -37,6 +37,7 @@ public class GeoJsonSerializer {
     for (Point point : this.points) {
       Feature _point = new Feature();
       _point.setGeometry(new org.geojson.Point(point.getLat(), point.getLng()));
+      _point.setProperty("marker-size","small");
       featureCollection.add(_point);
     }
 
