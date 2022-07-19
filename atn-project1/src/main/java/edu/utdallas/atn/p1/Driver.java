@@ -1,8 +1,8 @@
-package edu.utdallas.atn;
+package edu.utdallas.atn.p1;
 
-import edu.utdallas.atn.core.a_param_gen.ParameterGenerator;
-import edu.utdallas.atn.core.b_algo.NetworkCostAlgorithm;
-import edu.utdallas.atn.core.b_algo.Output;
+import edu.utdallas.atn.p1.core.a_param_gen.ParameterGenerator;
+import edu.utdallas.atn.p1.core.b_algo.NetworkCostAlgorithm;
+import edu.utdallas.atn.p1.core.b_algo.Output;
 
 import java.util.Scanner;
 

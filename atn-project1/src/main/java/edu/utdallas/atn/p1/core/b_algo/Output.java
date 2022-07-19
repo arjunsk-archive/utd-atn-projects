@@ -1,6 +1,6 @@
-package edu.utdallas.atn.core.b_algo;
+package edu.utdallas.atn.p1.core.b_algo;
 
-import edu.utdallas.atn.core.c_visualizer.PrintableGraph;
+import edu.utdallas.atn.p1.core.c_visualizer.PrintableGraph;
 
 public class Output {
   private final PrintableGraph graph;

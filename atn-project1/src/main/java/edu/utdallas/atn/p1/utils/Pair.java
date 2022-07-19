@@ -1,4 +1,4 @@
-package edu.utdallas.atn.utils;
+package edu.utdallas.atn.p1.utils;
 
 public class Pair<K, V> {
   K key;

@@ -1,6 +1,6 @@
-package edu.utdallas.atn.core.a_param_gen;
+package edu.utdallas.atn.p1.core.a_param_gen;
 
-import edu.utdallas.atn.utils.CommonUtils;
+import edu.utdallas.atn.p1.utils.CommonUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;

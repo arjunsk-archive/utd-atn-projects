@@ -1,4 +1,4 @@
-package edu.utdallas.atn.core.c_visualizer;
+package edu.utdallas.atn.p1.core.c_visualizer;
 
 import guru.nidi.graphviz.engine.Format;
 import guru.nidi.graphviz.engine.Graphviz;
