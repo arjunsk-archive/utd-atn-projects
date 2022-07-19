@@ -5,7 +5,7 @@ import edu.utdallas.atn.core.a_param_gen.ParameterGenerator;
 import edu.utdallas.atn.core.b_algos.HeuristicsAlgo1;
 import edu.utdallas.atn.core.b_algos.HeuristicsAlgo2;
 import edu.utdallas.atn.core.c_visualize.GeoJsonSerializer;
-import edu.utdallas.atn.utils.Pair;
+import edu.utdallas.atn.utils.Point;
 import edu.utdallas.atn.utils.Topology;
 
 import java.util.List;
@@ -19,7 +19,7 @@ public class Driver {
     int n = sc.nextInt();
 
     ParameterGenerator pg = new ParameterGenerator(n);
-    List<Pair<Double, Double>> coordinates = pg.generateCoordinates();
+    List<Point> coordinates = pg.generateCoordinates();
 
     // 2. Algo execution
     Topology result1 = new HeuristicsAlgo1(coordinates).solve();

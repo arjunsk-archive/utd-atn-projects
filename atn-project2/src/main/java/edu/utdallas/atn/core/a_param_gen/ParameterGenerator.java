@@ -1,6 +1,6 @@
 package edu.utdallas.atn.core.a_param_gen;
 
-import edu.utdallas.atn.utils.Pair;
+import edu.utdallas.atn.utils.Point;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,14 +20,14 @@ public class ParameterGenerator {
     this.nodeCount = nodeCount;
   }
 
-  public List<Pair<Double, Double>> generateCoordinates() {
+  public List<Point> generateCoordinates() {
 
-    List<Pair<Double, Double>> coordinates = new ArrayList<>();
+    List<Point> coordinates = new ArrayList<>();
 
     for (int i = 0; i < nodeCount; i++) {
       double x = getRandomCoordinate(LAT_MIN, LAT_MAX);
       double y = getRandomCoordinate(LNG_MIN, LNG_MAX);
-      coordinates.add(new Pair<>(x, y));
+      coordinates.add(new Point(x, y));
     }
 
     return coordinates;

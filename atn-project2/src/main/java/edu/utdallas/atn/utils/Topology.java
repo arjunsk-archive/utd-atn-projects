@@ -4,21 +4,19 @@ import java.util.List;
 
 public class Topology {
 
-  List<Pair<Double, Double>> coordinates;
-  List<Pair<Pair<Double, Double>, Pair<Double, Double>>> edges;
+  List<Point> coordinates;
+  List<Edge> edges;
 
-  public Topology(
-      List<Pair<Double, Double>> coordinates,
-      List<Pair<Pair<Double, Double>, Pair<Double, Double>>> edges) {
+  public Topology(List<Point> coordinates, List<Edge> edges) {
     this.coordinates = coordinates;
     this.edges = edges;
   }
 
-  public List<Pair<Double, Double>> getCoordinates() {
+  public List<Point> getCoordinates() {
     return coordinates;
   }
 
-  public List<Pair<Pair<Double, Double>, Pair<Double, Double>>> getEdges() {
+  public List<Edge> getEdges() {
     return edges;
   }
 }
