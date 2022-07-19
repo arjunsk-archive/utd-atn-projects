@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.utdallas.atn.p2.domain.Edge;
 import edu.utdallas.atn.p2.domain.Point;
-import edu.utdallas.atn.p2.domain.Topology;
+import edu.utdallas.atn.p2.domain.Graph;
 import org.geojson.Feature;
 import org.geojson.FeatureCollection;
 import org.geojson.LineString;
@@ -22,8 +22,8 @@ public class GeoJsonSerializer {
     this(coordinates, new ArrayList<>());
   }
 
-  public GeoJsonSerializer(Topology topology) {
-    this(topology.getCoordinates(), topology.getEdges());
+  public GeoJsonSerializer(Graph graph) {
+    this(graph.getCoordinates(), graph.getEdges());
   }
 
   public GeoJsonSerializer(List<Point> coordinates, List<Edge> edges) {

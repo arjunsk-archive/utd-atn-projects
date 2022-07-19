@@ -16,4 +16,8 @@ public class Edge {
   public Point getEnd() {
     return end;
   }
+
+  public Double getDistance() {
+    return start.distanceTo(end);
+  }
 }

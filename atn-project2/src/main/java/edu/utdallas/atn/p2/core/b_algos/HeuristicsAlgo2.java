@@ -1,14 +1,18 @@
 package edu.utdallas.atn.p2.core.b_algos;
 
+import edu.utdallas.atn.p2.domain.Graph;
 import edu.utdallas.atn.p2.domain.Point;
-import edu.utdallas.atn.p2.domain.Topology;
 
-import java.util.List;
+import java.util.Map;
 
 public class HeuristicsAlgo2 {
-  public HeuristicsAlgo2(List<Point> coordinates) {}
+  private final Map<Point, Integer> coordinates;
 
-  public Topology solve() {
+  public HeuristicsAlgo2(Map<Point, Integer> coordinates) {
+    this.coordinates = coordinates;
+  }
+
+  public Graph solve() {
     return null;
   }
 }

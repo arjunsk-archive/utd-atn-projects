@@ -5,10 +5,10 @@ import edu.utdallas.atn.p2.core.a_param_gen.ParameterGenerator;
 import edu.utdallas.atn.p2.core.b_algos.HeuristicsAlgo1;
 import edu.utdallas.atn.p2.core.b_algos.HeuristicsAlgo2;
 import edu.utdallas.atn.p2.core.c_visualize.GeoJsonSerializer;
+import edu.utdallas.atn.p2.domain.Graph;
 import edu.utdallas.atn.p2.domain.Point;
-import edu.utdallas.atn.p2.domain.Topology;
 
-import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Driver {
@@ -16,20 +16,20 @@ public class Driver {
     // 1. Input Generation
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter N");
-    int n = sc.nextInt();
+    int n = 16; // sc.nextInt();
 
     ParameterGenerator pg = new ParameterGenerator(n);
-    List<Point> coordinates = pg.generateCoordinates();
+    Map<Point, Integer> coordinates = pg.generateCoordinates();
 
     // 2. Algo execution
-    Topology result1 = new HeuristicsAlgo1(coordinates).solve();
-    Topology result2 = new HeuristicsAlgo2(coordinates).solve();
+    Graph result1 = new HeuristicsAlgo1(coordinates).solve();
+    Graph result2 = new HeuristicsAlgo2(coordinates).solve();
 
     // 3. Visualization
     String geoJson1 = new GeoJsonSerializer(result1).toJson();
     System.out.println(geoJson1);
 
-    String geoJson2 = new GeoJsonSerializer(result2).toJson();
-    System.out.println(geoJson2);
+    //    String geoJson2 = new GeoJsonSerializer(result2).toJson();
+    //    System.out.println(geoJson2);
   }
 }
