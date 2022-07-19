@@ -89,7 +89,7 @@
                     <finalName>uber-${project.artifactId}-${project.version}</finalName>
                     <transformers>
                         <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                            <mainClass>edu.utdallas.atn.p2.Driver</mainClass>
+                            <mainClass>edu.utdallas.atn.p1.Driver</mainClass>
                         </transformer>
                     </transformers>
                 </configuration>
