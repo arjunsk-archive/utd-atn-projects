@@ -5,7 +5,6 @@ import edu.utdallas.atn.p2.domain.Graph;
 import edu.utdallas.atn.p2.domain.Point;
 
 import java.util.List;
-import java.util.Map;
 import java.util.PriorityQueue;
 
 public class HeuristicsAlgo1 {
@@ -40,7 +39,7 @@ public class HeuristicsAlgo1 {
       this.graph = newGraph;
     }
 
-//    System.out.println(numberOfEdgeRemovals);
+    System.out.println(numberOfEdgeRemovals);
     return this.graph;
   }
 }

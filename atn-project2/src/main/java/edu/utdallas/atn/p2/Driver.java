@@ -9,7 +9,6 @@ import edu.utdallas.atn.p2.domain.Graph;
 import edu.utdallas.atn.p2.domain.Point;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Driver {
@@ -17,7 +16,7 @@ public class Driver {
     // 1. Input Generation
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter N");
-    int n = 15; // sc.nextInt();
+    int n = 35; // sc.nextInt();
 
     ParameterGenerator pg = new ParameterGenerator(n);
     List<Point> coordinates = pg.generateCoordinates();
@@ -32,5 +31,8 @@ public class Driver {
 
     String geoJson2 = new GeoJsonSerializer(result2).toJson();
     System.out.println(geoJson2);
+
+    System.out.println(result1.cost());
+    System.out.println(result2.cost());
   }
 }

@@ -176,4 +176,13 @@ public class Graph {
     Collections.sort(result, (a, b) -> Double.compare(a.distanceTo(point), b.distanceTo(point)));
     return result;
   }
+
+  public Double cost() {
+    double total = 0;
+    for (Edge edge : getEdges()) {
+      total += edge.getDistance();
+    }
+
+    return total;
+  }
 }
