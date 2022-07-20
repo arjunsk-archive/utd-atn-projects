@@ -9,25 +9,29 @@ import org.geojson.FeatureCollection;
 import org.geojson.LineString;
 import org.geojson.LngLatAlt;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class GeoJsonSerializer {
 
   private final List<Point> points;
   private final List<Edge> edges;
-
-  public GeoJsonSerializer(List<Point> coordinates) {
-    this(coordinates, new ArrayList<>());
-  }
+  private final Map<String, Object> properties;
 
   public GeoJsonSerializer(Graph graph) {
-    this(graph.getCoordinates(), graph.getEdges());
+    this(graph.getCoordinates(), graph.getEdges(), new HashMap<>());
   }
 
-  public GeoJsonSerializer(List<Point> coordinates, List<Edge> edges) {
+  public GeoJsonSerializer(Graph graph, Map<String, Object> properties) {
+    this(graph.getCoordinates(), graph.getEdges(), properties);
+  }
+
+  public GeoJsonSerializer(
+      List<Point> coordinates, List<Edge> edges, Map<String, Object> properties) {
     this.points = coordinates;
     this.edges = edges;
+    this.properties = properties;
   }
 
   public String toJson() {
@@ -36,6 +40,7 @@ public class GeoJsonSerializer {
     for (Point point : this.points) {
       Feature _point = new Feature();
       _point.setGeometry(new org.geojson.Point(point.getLng(), point.getLat()));
+      _point.setProperties(properties);
       _point.setProperty("marker-size", "small");
       featureCollection.add(_point);
     }
