@@ -20,22 +20,12 @@ public class Rectangle {
 
   public boolean contains(Point point) {
 
-    return contains(
-        southWest.getLat(),
-        southWest.getLng(),
-        northEast.getLat(),
-        northEast.getLng(),
-        point.getLat(),
-        point.getLng());
-  }
-
-  public boolean contains(
-      double swLatitude,
-      double swLongitude,
-      double neLatitude,
-      double neLongitude,
-      double latitude,
-      double longitude) {
+    double swLatitude = southWest.getLat();
+    double swLongitude = southWest.getLng();
+    double neLatitude = northEast.getLat();
+    double neLongitude = northEast.getLng();
+    double latitude = point.getLat();
+    double longitude = point.getLng();
 
     boolean longitudeContained = false;
     boolean latitudeContained = false;
