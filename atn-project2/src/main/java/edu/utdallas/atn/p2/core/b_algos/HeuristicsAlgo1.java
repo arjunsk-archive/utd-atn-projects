@@ -4,6 +4,7 @@ import edu.utdallas.atn.p2.domain.Edge;
 import edu.utdallas.atn.p2.domain.Graph;
 import edu.utdallas.atn.p2.domain.Point;
 
+import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
 
@@ -12,7 +13,7 @@ public class HeuristicsAlgo1 {
   private Graph graph;
   private final PriorityQueue<Edge> edgesPq;
 
-  public HeuristicsAlgo1(Map<Point, Integer> coordinates) {
+  public HeuristicsAlgo1(List<Point> coordinates) {
     this.graph = new Graph(coordinates);
     this.edgesPq = new PriorityQueue<>((a, b) -> Double.compare(b.getDistance(), a.getDistance()));
   }

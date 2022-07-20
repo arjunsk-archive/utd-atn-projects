@@ -9,9 +9,9 @@ import edu.utdallas.atn.p2.domain.Rectangle;
 import java.util.*;
 
 public class HeuristicsAlgo2 {
-  private final Map<Point, Integer> coordinates;
+  private final List<Point> coordinates;
 
-  public HeuristicsAlgo2(Map<Point, Integer> coordinates) {
+  public HeuristicsAlgo2(List<Point> coordinates) {
     this.coordinates = coordinates;
   }
 
@@ -71,7 +71,7 @@ public class HeuristicsAlgo2 {
   }
 
   private void bucketPointsToSegments(Rectangle[][] rectangles) {
-    for (Point point : coordinates.keySet()) {
+    for (Point point : coordinates) {
 
       boolean found = false;
       for (int r = 0; r < 3; r++) {
@@ -105,7 +105,7 @@ public class HeuristicsAlgo2 {
     double maxLng = Integer.MIN_VALUE;
     double minLng = Integer.MAX_VALUE;
 
-    for (Point point : coordinates.keySet()) {
+    for (Point point : coordinates) {
       maxLat = Math.max(maxLat, point.getLat());
       minLat = Math.min(minLat, point.getLat());
 

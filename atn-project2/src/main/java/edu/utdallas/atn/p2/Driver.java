@@ -8,6 +8,7 @@ import edu.utdallas.atn.p2.core.c_visualize.GeoJsonSerializer;
 import edu.utdallas.atn.p2.domain.Graph;
 import edu.utdallas.atn.p2.domain.Point;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -19,7 +20,7 @@ public class Driver {
     int n = 15; // sc.nextInt();
 
     ParameterGenerator pg = new ParameterGenerator(n);
-    Map<Point, Integer> coordinates = pg.generateCoordinates();
+    List<Point> coordinates = pg.generateCoordinates();
 
     // 2. Algo execution
     Graph result1 = new HeuristicsAlgo1(coordinates).solve();

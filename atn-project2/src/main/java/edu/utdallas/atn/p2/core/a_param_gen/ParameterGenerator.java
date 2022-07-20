@@ -2,7 +2,9 @@ package edu.utdallas.atn.p2.core.a_param_gen;
 
 import edu.utdallas.atn.p2.domain.Point;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -20,14 +22,14 @@ public class ParameterGenerator {
     this.nodeCount = nodeCount;
   }
 
-  public Map<Point, Integer> generateCoordinates() {
+  public List<Point> generateCoordinates() {
 
-    Map<Point, Integer> coordinates = new HashMap<>();
+    List<Point> coordinates = new ArrayList<>();
 
     for (int i = 0; i < nodeCount; i++) {
       double lat = getRandomCoordinate(MIN_LAT, MAX_LAT);
       double lng = getRandomCoordinate(MIN_LNG, MAX_LNG);
-      coordinates.put(new Point(lat, lng), i);
+      coordinates.add(new Point(lat, lng));
     }
 
     return coordinates;
