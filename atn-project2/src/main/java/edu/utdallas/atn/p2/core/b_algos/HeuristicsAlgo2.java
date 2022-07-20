@@ -142,8 +142,8 @@ public class HeuristicsAlgo2 {
     Rectangle[][] segments = new Rectangle[3][3];
     for (int r = 0; r < 3; r++) {
       for (int c = 0; c < 3; c++) {
-        Point bottomLeft = points[r][c];
-        Point topRight = points[r + 1][c + 1];
+        Point bottomLeft = points[r + 1][c + 1];
+        Point topRight = points[r][c];
         segments[r][c] = new Rectangle(bottomLeft, topRight);
       }
     }

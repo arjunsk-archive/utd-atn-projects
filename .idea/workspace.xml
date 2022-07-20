@@ -157,8 +157,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RectangleTest" />
         <item itemvalue="Application.Driver" />
+        <item itemvalue="JUnit.RectangleTest" />
         <item itemvalue="Application.GeoJsonSerializer" />
       </list>
     </recent_temporary>
