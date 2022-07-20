@@ -6,10 +6,7 @@ import edu.utdallas.atn.p2.domain.Graph;
 import edu.utdallas.atn.p2.domain.Point;
 import edu.utdallas.atn.p2.domain.Rectangle;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class HeuristicsAlgo2 {
   private final List<Point> coordinates;
@@ -53,18 +50,30 @@ public class HeuristicsAlgo2 {
 
   private void stronglyConnectAllSegments(Graph[][] segmentGraphs, Graph output) {
 
-    List<Point> segmentCenters = new ArrayList<>();
-    for (int r = 0; r < 3; r++) {
-      for (int c = 0; c < 3; c++) {
-        if (segmentGraphs[r][c].getCenter().isPresent())
-          segmentCenters.add(segmentGraphs[r][c].getCenter().get());
+    Optional<Point> middleSegmentCenter = segmentGraphs[1][1].getCenter();
+    if (middleSegmentCenter.isPresent()) {
+      for (int r = 0; r < 3; r++) {
+        for (int c = 0; c < 3; c++) {
+          if (r == 1 && c == 1) continue;
+          Optional<Point> segmentCenter = segmentGraphs[r][c].getCenter();
+          if (segmentCenter.isPresent())
+            output.addEdge(new Edge(segmentCenter.get(), middleSegmentCenter.get()));
+        }
       }
-    }
+    } else {
+      List<Point> segmentCenters = new ArrayList<>();
+      for (int r = 0; r < 3; r++) {
+        for (int c = 0; c < 3; c++) {
+          if (segmentGraphs[r][c].getCenter().isPresent())
+            segmentCenters.add(segmentGraphs[r][c].getCenter().get());
+        }
+      }
 
-    for (int i = 0; i < segmentCenters.size(); i++) {
-      for (int j = 0; j < segmentCenters.size(); j++) {
-        if (i == j) continue;
-        output.addEdge(new Edge(segmentCenters.get(i), segmentCenters.get(j)));
+      for (int i = 0; i < segmentCenters.size(); i++) {
+        for (int j = 0; j < segmentCenters.size(); j++) {
+          if (i == j) continue;
+          output.addEdge(new Edge(segmentCenters.get(i), segmentCenters.get(j)));
+        }
       }
     }
   }
@@ -119,6 +128,13 @@ public class HeuristicsAlgo2 {
       maxLng = Math.max(maxLng, point.getLng());
       minLng = Math.min(minLng, point.getLng());
     }
+
+    // Adding an extra padding
+    maxLat += 0.0005;
+    minLat -= 0.0005;
+
+    maxLng += 0.0005;
+    minLng -= 0.0005;
 
     // 1. Generate Boundary Rectangle
     Point outerRectangleTopLeft = new Point(minLat, maxLng);
