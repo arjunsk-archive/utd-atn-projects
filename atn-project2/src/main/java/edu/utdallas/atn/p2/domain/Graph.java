@@ -8,7 +8,7 @@ public class Graph {
   private final Map<Integer, Point> reverseIndex;
 
   private final int n;
-  private final Boolean[][] connectivityAdjMatrix;
+  private final boolean[][] connectivityAdjMatrix;
 
   public Graph(Graph graph) {
     this.n = graph.n;
@@ -18,7 +18,7 @@ public class Graph {
     this.reverseIndex = new HashMap<>(graph.reverseIndex);
 
     // Deep Copy, 2D Array
-    this.connectivityAdjMatrix = new Boolean[n][n];
+    this.connectivityAdjMatrix = new boolean[n][n];
     for (int r = 0; r < n; r++)
       this.connectivityAdjMatrix[r] = Arrays.copyOf(graph.connectivityAdjMatrix[r], n);
   }
@@ -29,15 +29,18 @@ public class Graph {
 
     this.index.forEach((k, v) -> reverseIndex.put(v, k));
     this.n = index.size();
-    this.connectivityAdjMatrix = new Boolean[n][n];
+    this.connectivityAdjMatrix = new boolean[n][n];
   }
 
-  public void makeItCompleteGraph() {
-    for (int r = 0; r < n; r++) {
-      for (int c = 0; c < n; c++) {
-        connectivityAdjMatrix[r][c] = true;
-      }
-    }
+  public void addEdge(Edge edge) {
+    Point start = edge.getStart();
+    Point end = edge.getEnd();
+
+    int startIndex = index.get(start);
+    int endIndex = index.get(end);
+
+    connectivityAdjMatrix[startIndex][endIndex] = true;
+    connectivityAdjMatrix[endIndex][startIndex] = true;
   }
 
   public void removeEdge(Edge edge) {
@@ -49,6 +52,14 @@ public class Graph {
 
     connectivityAdjMatrix[startIndex][endIndex] = false;
     connectivityAdjMatrix[endIndex][startIndex] = false;
+  }
+
+  public void makeItCompleteGraph() {
+    for (int r = 0; r < n; r++) {
+      for (int c = 0; c < n; c++) {
+        connectivityAdjMatrix[r][c] = true;
+      }
+    }
   }
 
   public int getSmallestDegree() {
@@ -103,6 +114,10 @@ public class Graph {
 
   public List<Point> getCoordinates() {
     return new ArrayList<>(index.keySet());
+  }
+
+  public Optional<Point> getCenter() {
+    return getCoordinates().size() == 0 ? Optional.empty() : Optional.of(getCoordinates().get(0));
   }
 
   public List<Edge> getEdges() {

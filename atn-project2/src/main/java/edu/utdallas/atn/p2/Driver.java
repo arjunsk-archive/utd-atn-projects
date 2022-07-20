@@ -27,9 +27,9 @@ public class Driver {
 
     // 3. Visualization
     String geoJson1 = new GeoJsonSerializer(result1).toJson();
-    System.out.println(geoJson1);
+//    System.out.println(geoJson1);
 
-    //    String geoJson2 = new GeoJsonSerializer(result2).toJson();
-    //    System.out.println(geoJson2);
+    String geoJson2 = new GeoJsonSerializer(result2).toJson();
+    System.out.println(geoJson2);
   }
 }
