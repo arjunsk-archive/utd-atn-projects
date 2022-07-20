@@ -3,8 +3,8 @@ package edu.utdallas.atn.p2.core.c_visualize;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.utdallas.atn.p2.domain.Edge;
-import edu.utdallas.atn.p2.domain.Point;
 import edu.utdallas.atn.p2.domain.Graph;
+import edu.utdallas.atn.p2.domain.Point;
 import org.geojson.Feature;
 import org.geojson.FeatureCollection;
 import org.geojson.LineString;
@@ -36,8 +36,8 @@ public class GeoJsonSerializer {
 
     for (Point point : this.points) {
       Feature _point = new Feature();
-      _point.setGeometry(new org.geojson.Point(point.getLat(), point.getLng()));
-      _point.setProperty("marker-size","small");
+      _point.setGeometry(new org.geojson.Point(point.getLng(), point.getLat()));
+      _point.setProperty("marker-size", "small");
       featureCollection.add(_point);
     }
 
@@ -48,7 +48,8 @@ public class GeoJsonSerializer {
 
       _line.setGeometry(
           new LineString(
-              new LngLatAlt(start.getLat(), start.getLng()), new LngLatAlt(end.getLat(), end.getLng())));
+              new LngLatAlt(start.getLng(), start.getLat()),
+              new LngLatAlt(end.getLng(), end.getLat())));
 
       featureCollection.add(_line);
     }

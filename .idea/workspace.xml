@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f361530c-8411-41af-922f-5bd634bcfd11" name="Changes" comment="Working HeuristicsAlgo1">
-      <change afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/domain/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/utils/LatLngUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/atn-project2/src/test/java/edu/utdallas/atn/p2/domain/RectangleTest.java" afterDir="false" />
+    <list default="true" id="f361530c-8411-41af-922f-5bd634bcfd11" name="Changes" comment="Partial HeuristicsAlgo2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atn-project2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/domain/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/domain/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/a_param_gen/ParameterGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/a_param_gen/ParameterGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/c_visualize/GeoJsonSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/c_visualize/GeoJsonSerializer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +169,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658207379416</updated>
       <workItem from="1658207380722" duration="16829000" />
-      <workItem from="1658264467741" duration="13462000" />
+      <workItem from="1658264467741" duration="14146000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1658207703258</created>
@@ -267,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658266805472</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Partial HeuristicsAlgo2">
+      <created>1658281055666</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1658281055666</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +293,8 @@
     <MESSAGE value="package name refactor" />
     <MESSAGE value="HeuristicsAlgo1" />
     <MESSAGE value="Working HeuristicsAlgo1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working HeuristicsAlgo1" />
+    <MESSAGE value="Partial HeuristicsAlgo2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Partial HeuristicsAlgo2" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
@@ -308,6 +311,16 @@
           <url>file://$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo2.java</url>
           <line>25</line>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo2.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo2.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
