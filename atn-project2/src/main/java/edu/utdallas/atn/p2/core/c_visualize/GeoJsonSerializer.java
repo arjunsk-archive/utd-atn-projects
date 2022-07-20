@@ -1,6 +1,5 @@
 package edu.utdallas.atn.p2.core.c_visualize;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.utdallas.atn.p2.domain.Edge;
 import edu.utdallas.atn.p2.domain.Graph;
@@ -31,7 +30,7 @@ public class GeoJsonSerializer {
     this.edges = edges;
   }
 
-  public String toJson() throws JsonProcessingException {
+  public String toJson() {
     FeatureCollection featureCollection = new FeatureCollection();
 
     for (Point point : this.points) {
@@ -54,6 +53,13 @@ public class GeoJsonSerializer {
       featureCollection.add(_line);
     }
 
-    return new ObjectMapper().writeValueAsString(featureCollection);
+    String json = "{}";
+    try {
+      json = new ObjectMapper().writeValueAsString(featureCollection);
+    } catch (Exception ex) {
+      ex.printStackTrace();
+    }
+
+    return json;
   }
 }

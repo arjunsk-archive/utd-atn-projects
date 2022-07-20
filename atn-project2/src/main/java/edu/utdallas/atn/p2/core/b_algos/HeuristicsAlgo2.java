@@ -108,15 +108,15 @@ public class HeuristicsAlgo2 {
     }
 
     // 1. Generate Boundary Rectangle
-    Point OuterRectangleTopLeft = new Point(minLat, maxLng);
-    Point OuterRectangleTopRight = new Point(maxLat, maxLng);
+    Point outerRectangleTopLeft = new Point(minLat, maxLng);
+    Point outerRectangleTopRight = new Point(maxLat, maxLng);
 
     Point outerRectangleBottomLeft = new Point(minLat, minLng);
     Point outerRectangleBottomRight = new Point(maxLat, minLng);
 
     // 2. Find deltaX & deltaY
     double width = outerRectangleBottomLeft.getLat() - outerRectangleBottomRight.getLat();
-    double height = outerRectangleBottomLeft.getLng() - OuterRectangleTopLeft.getLng();
+    double height = outerRectangleBottomLeft.getLng() - outerRectangleTopLeft.getLng();
 
     double deltaX = width / 3.0;
     double deltaY = height / 3.0;
@@ -126,8 +126,8 @@ public class HeuristicsAlgo2 {
     for (int r = 0; r < 4; r++) {
       for (int c = 0; c < 4; c++) {
 
-        double lat = outerRectangleBottomLeft.getLat() + r * deltaX;
-        double lng = outerRectangleBottomLeft.getLng() + c * deltaY;
+        double lat = outerRectangleTopRight.getLat() + r * deltaX;
+        double lng = outerRectangleTopRight.getLng() + c * deltaY;
         points[r][c] = new Point(lat, lng);
       }
     }
