@@ -1,9 +1,7 @@
 package edu.utdallas.atn.p2.domain;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Rectangle {
 
@@ -59,9 +57,6 @@ public class Rectangle {
   }
 
   public Graph generateGraph() {
-    Map<Point, Integer> map = new HashMap<>();
-    int idx = 0;
-    for (Point point : this.points) map.put(point, idx++);
-    return new Graph(map);
+    return new Graph(this.points);
   }
 }

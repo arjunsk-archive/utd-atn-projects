@@ -23,6 +23,21 @@ public class Graph {
       this.connectivityAdjMatrix[r] = Arrays.copyOf(graph.connectivityAdjMatrix[r], n);
   }
 
+  public Graph(List<Point> points) {
+
+    this.index = new HashMap<>();
+    int counter = 0;
+    for (Point point : points) this.index.put(point, counter++);
+
+    this.reverseIndex = new HashMap<>();
+    this.index.forEach((k, v) -> reverseIndex.put(v, k));
+
+    this.n = index.size();
+    this.connectivityAdjMatrix = new boolean[n][n];
+  }
+
+  /** Use {@link Graph#Graph(List)} ) } instead */
+  @Deprecated
   public Graph(Map<Point, Integer> index) {
     this.index = index;
     this.reverseIndex = new HashMap<>();

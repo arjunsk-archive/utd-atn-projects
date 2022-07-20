@@ -1,12 +1,12 @@
 package edu.utdallas.atn.p2.core.b_algos;
 
+import edu.utdallas.atn.p2.core.c_visualize.GeoJsonSerializer;
 import edu.utdallas.atn.p2.domain.Edge;
 import edu.utdallas.atn.p2.domain.Graph;
 import edu.utdallas.atn.p2.domain.Point;
 import edu.utdallas.atn.p2.domain.Rectangle;
 
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 public class HeuristicsAlgo2 {
   private final Map<Point, Integer> coordinates;
@@ -129,12 +129,14 @@ public class HeuristicsAlgo2 {
 
     // 3. Create segment corners
     Point[][] points = new Point[4][4];
+    List<Point> segmentBoundaryPoints = new ArrayList<>();
     for (int r = 0; r < 4; r++) {
       for (int c = 0; c < 4; c++) {
 
         double lat = outerRectangleTopRight.getLat() + r * deltaX;
         double lng = outerRectangleTopRight.getLng() + c * deltaY;
         points[r][c] = new Point(lat, lng);
+        segmentBoundaryPoints.add(points[r][c]);
       }
     }
 
@@ -147,6 +149,18 @@ public class HeuristicsAlgo2 {
         segments[r][c] = new Rectangle(bottomLeft, topRight);
       }
     }
+
+    /* Test Part */
+    System.out.println("Segments");
+
+    Graph _temp = new Graph(segmentBoundaryPoints);
+    _temp.makeItCompleteGraph();
+
+    Map<String, Object> properties = new HashMap<>();
+    properties.put("marker-color", "#bf1818");
+
+    System.out.println(new GeoJsonSerializer(_temp, properties).toJson());
+
     return segments;
   }
 }

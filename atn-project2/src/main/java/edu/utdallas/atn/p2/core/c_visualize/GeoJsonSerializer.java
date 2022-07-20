@@ -9,6 +9,7 @@ import org.geojson.FeatureCollection;
 import org.geojson.LineString;
 import org.geojson.LngLatAlt;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,6 +19,10 @@ public class GeoJsonSerializer {
   private final List<Point> points;
   private final List<Edge> edges;
   private final Map<String, Object> properties;
+
+  public GeoJsonSerializer(List<Point> points, Map<String, Object> properties) {
+    this(points, new ArrayList<>(), properties);
+  }
 
   public GeoJsonSerializer(Graph graph) {
     this(graph.getCoordinates(), graph.getEdges(), new HashMap<>());
