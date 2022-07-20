@@ -139,4 +139,41 @@ public class Graph {
 
     return edges;
   }
+
+  public void checkAndCorrectDegreeConstraint(int expectedDegree) {
+    for (int r = 0; r < n; r++) {
+      int actualDegree = 0;
+      for (int c = 0; c < n; c++) {
+        if (r == c) continue;
+        if (connectivityAdjMatrix[r][c]) actualDegree++;
+      }
+      if (actualDegree < expectedDegree) improviseDegreeTo(r, expectedDegree - actualDegree);
+    }
+  }
+
+  private void improviseDegreeTo(int nodeIndex, int diff) {
+    // 1. Get current Neighbours (to ensure that you don't re-add them.
+    List<Point> currentNeighbours = new ArrayList<>();
+    for (int c = 0; c < n; c++)
+      if (connectivityAdjMatrix[nodeIndex][c]) currentNeighbours.add(reverseIndex.get(c));
+
+    // 2. Find the closest neighbour
+    Point root = reverseIndex.get(nodeIndex);
+    Queue<Point> neighbours = new ArrayDeque<>(closestNeighbours(root));
+    neighbours.removeAll(currentNeighbours);
+
+    // 3. attach to the nearest feasible neighbour
+    while (diff > 0) {
+      addEdge(new Edge(root, neighbours.poll()));
+      diff--;
+    }
+  }
+
+  public List<Point> closestNeighbours(Point point) {
+    List<Point> result = new ArrayList<>(index.keySet());
+    result.remove(point);
+
+    Collections.sort(result, (a, b) -> Double.compare(a.distanceTo(point), b.distanceTo(point)));
+    return result;
+  }
 }

@@ -35,6 +35,8 @@ public class HeuristicsAlgo2 {
     // 6. Merge rest of the segments to the main graph
     mergeSegmentsToMainGraph(segmentGraphs, output);
 
+    output.checkAndCorrectDegreeConstraint(3);
+
     return output;
   }
 
@@ -147,8 +149,8 @@ public class HeuristicsAlgo2 {
     double width = outerRectangleBottomLeft.getLat() - outerRectangleBottomRight.getLat();
     double height = outerRectangleBottomLeft.getLng() - outerRectangleTopLeft.getLng();
 
-    double deltaX = width / 3.0;
-    double deltaY = height / 3.0;
+    double deltaLat = width / 3.0;
+    double deltaLng = height / 3.0;
 
     // 3. Create segment corners
     Point[][] points = new Point[4][4];
@@ -156,8 +158,9 @@ public class HeuristicsAlgo2 {
     for (int r = 0; r < 4; r++) {
       for (int c = 0; c < 4; c++) {
 
-        double lat = outerRectangleTopRight.getLat() + r * deltaX;
-        double lng = outerRectangleTopRight.getLng() + c * deltaY;
+        // TODO: This portion somehow works
+        double lat = outerRectangleTopRight.getLat() + r * deltaLat;
+        double lng = outerRectangleTopRight.getLng() + c * deltaLng;
         points[r][c] = new Point(lat, lng);
         segmentBoundaryPoints.add(points[r][c]);
       }

@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/Driver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/domain/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/domain/Graph.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +173,7 @@
       <updated>1658207379416</updated>
       <workItem from="1658207380722" duration="16829000" />
       <workItem from="1658264467741" duration="20631000" />
-      <workItem from="1658289966921" duration="2596000" />
+      <workItem from="1658289966921" duration="4500000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1658207703258</created>
@@ -342,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658290688448</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Partial HeuristicsAlgo2">
+      <created>1658294195955</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1658294195955</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
