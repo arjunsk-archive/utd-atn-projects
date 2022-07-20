@@ -36,17 +36,6 @@ public class Graph {
     this.connectivityAdjMatrix = new boolean[n][n];
   }
 
-  /** Use {@link Graph#Graph(List)} ) } instead */
-  @Deprecated
-  public Graph(Map<Point, Integer> index) {
-    this.index = index;
-    this.reverseIndex = new HashMap<>();
-
-    this.index.forEach((k, v) -> reverseIndex.put(v, k));
-    this.n = index.size();
-    this.connectivityAdjMatrix = new boolean[n][n];
-  }
-
   public void addEdge(Edge edge) {
     Point start = edge.getStart();
     Point end = edge.getEnd();

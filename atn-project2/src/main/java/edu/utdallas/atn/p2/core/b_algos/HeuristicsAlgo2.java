@@ -6,7 +6,10 @@ import edu.utdallas.atn.p2.domain.Graph;
 import edu.utdallas.atn.p2.domain.Point;
 import edu.utdallas.atn.p2.domain.Rectangle;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class HeuristicsAlgo2 {
   private final List<Point> coordinates;
@@ -30,7 +33,7 @@ public class HeuristicsAlgo2 {
 
     // 5. Add edge from each segment to the center segment
     Graph output = new Graph(coordinates);
-    contentOuterSegmentsToCenterSegment(segmentGraphs, output);
+    stronglyConnectAllSegments(segmentGraphs, output);
 
     // 6. Merge rest of the segments to the main graph
     mergeSegmentsToMainGraph(segmentGraphs, output);
@@ -48,16 +51,20 @@ public class HeuristicsAlgo2 {
     }
   }
 
-  private void contentOuterSegmentsToCenterSegment(Graph[][] segmentGraphs, Graph output) {
-    Optional<Point> centerSegment = segmentGraphs[1][1].getCenter();
-    if (!centerSegment.isPresent()) return;
+  private void stronglyConnectAllSegments(Graph[][] segmentGraphs, Graph output) {
 
+    List<Point> segmentCenters = new ArrayList<>();
     for (int r = 0; r < 3; r++) {
       for (int c = 0; c < 3; c++) {
-        if (r == 1 && c == 1) continue;
-        else if (segmentGraphs[r][c].getCenter().isPresent()) {
-          output.addEdge(new Edge(segmentGraphs[r][c].getCenter().get(), centerSegment.get()));
-        }
+        if (segmentGraphs[r][c].getCenter().isPresent())
+          segmentCenters.add(segmentGraphs[r][c].getCenter().get());
+      }
+    }
+
+    for (int i = 0; i < segmentCenters.size(); i++) {
+      for (int j = 0; j < segmentCenters.size(); j++) {
+        if (i == j) continue;
+        output.addEdge(new Edge(segmentCenters.get(i), segmentCenters.get(j)));
       }
     }
   }
