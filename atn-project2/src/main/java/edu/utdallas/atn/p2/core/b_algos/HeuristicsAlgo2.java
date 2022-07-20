@@ -17,13 +17,13 @@ public class HeuristicsAlgo2 {
 
   public Graph solve() {
     // 1. Create segments
-    Rectangle[][] segments = generateSegments();
+    Rectangle[][] rectangles = generateSegments();
 
     // 2. Add Points to segments
-    bucketPointsToSegments(segments);
+    bucketPointsToSegments(rectangles);
 
     // 3. Convert Rectangle points to individual graphs
-    Graph[][] segmentGraphs = generateSegmentGraphs(segments);
+    Graph[][] segmentGraphs = generateSegmentGraphs(rectangles);
 
     // 4. Strongly connect individual segmentGraphs
     makeIndividualSegmentGraphsCompleteGraph(segmentGraphs);
@@ -70,12 +70,18 @@ public class HeuristicsAlgo2 {
     }
   }
 
-  private void bucketPointsToSegments(Rectangle[][] segments) {
+  private void bucketPointsToSegments(Rectangle[][] rectangles) {
     for (Point point : coordinates.keySet()) {
+
+      boolean found = false;
       for (int r = 0; r < 3; r++) {
+        if (found) break;
+
         for (int c = 0; c < 3; c++) {
-          if (segments[r][c].contains(point)) {
-            segments[r][c].add(point);
+          if (found) break;
+          if (rectangles[r][c].contains(point)) {
+            rectangles[r][c].add(point);
+            found = true;
           }
         }
       }

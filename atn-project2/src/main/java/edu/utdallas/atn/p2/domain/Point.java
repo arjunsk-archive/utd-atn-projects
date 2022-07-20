@@ -5,23 +5,23 @@ import org.apache.lucene.util.SloppyMath;
 import java.util.Objects;
 
 public class Point {
-  private final Double lat;
-  private final Double lng;
+  private final double lat;
+  private final double lng;
 
-  public Point(Double lat, Double lng) {
+  public Point(double lat, double lng) {
     this.lat = lat;
     this.lng = lng;
   }
 
-  public Double getLat() {
+  public double getLat() {
     return lat;
   }
 
-  public Double getLng() {
+  public double getLng() {
     return lng;
   }
 
-  public Double distanceTo(Point end) {
+  public double distanceTo(Point end) {
     return SloppyMath.haversinMeters(this.getLat(), this.getLng(), end.getLat(), end.getLng());
   }
 
@@ -30,7 +30,8 @@ public class Point {
     if (this == o) return true;
     if (!(o instanceof Point)) return false;
     Point point = (Point) o;
-    return getLat().equals(point.getLat()) && getLng().equals(point.getLng());
+    return Double.compare(point.getLat(), getLat()) == 0
+        && Double.compare(point.getLng(), getLng()) == 0;
   }
 
   @Override

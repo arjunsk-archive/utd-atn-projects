@@ -7,10 +7,10 @@ import java.util.Map;
 
 public class Rectangle {
 
-  Point southWest;
-  Point northEast;
+  private final Point southWest;
+  private final Point northEast;
 
-  List<Point> points;
+  private final List<Point> points;
 
   public Rectangle(Point southWest, Point northEast) {
     this.southWest = southWest;
