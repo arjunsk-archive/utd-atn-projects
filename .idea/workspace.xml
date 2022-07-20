@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/Driver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/a_param_gen/ParameterGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/a_param_gen/ParameterGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/c_visualize/GeoJsonSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/c_visualize/GeoJsonSerializer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +65,10 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -169,7 +171,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658207379416</updated>
       <workItem from="1658207380722" duration="16829000" />
-      <workItem from="1658264467741" duration="14146000" />
+      <workItem from="1658264467741" duration="15139000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1658207703258</created>
@@ -269,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658281055666</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Partial HeuristicsAlgo2">
+      <created>1658281680480</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1658281680480</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,13 +323,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo2.java</url>
-          <line>114</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo2.java</url>
-          <line>102</line>
-          <option name="timeStamp" value="21" />
+          <line>76</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

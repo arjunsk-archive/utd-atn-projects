@@ -8,8 +8,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class ParameterGenerator {
 
-  private static final double MIN_LAT = 32.995995;
-  private static final double MAX_LAT = 33.041047;
+  private static final double MIN_LAT = 32.984100;
+  private static final double MAX_LAT = 32.995995;
 
   private static final double MIN_LNG = -456.732388;
   private static final double MAX_LNG = -456.650677;
