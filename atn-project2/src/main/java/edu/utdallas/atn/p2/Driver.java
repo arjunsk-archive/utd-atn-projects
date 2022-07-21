@@ -16,23 +16,35 @@ public class Driver {
     // 1. Input Generation
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter N");
-    int n = 35; // sc.nextInt();
+    int n = sc.nextInt();
 
     ParameterGenerator pg = new ParameterGenerator(n);
     List<Point> coordinates = pg.generateCoordinates();
 
-    // 2. Algo execution
+    // 2. Execution
+
+    // 2.1 Calculating the cost of complete graph
+    Graph result0 = new Graph(coordinates);
+    result0.makeItCompleteGraph();
+
+    // 2.2 Calculating the cost of Heuristic 1 & Heuristic 2 algorithms
     Graph result1 = new HeuristicsAlgo1(coordinates).solve();
     Graph result2 = new HeuristicsAlgo2(coordinates).solve();
 
     // 3. Visualization
+    String geoJson0 = new GeoJsonSerializer(result0).toJson();
+    System.out.println(geoJson0);
+    System.out.println("-----------");
+
     String geoJson1 = new GeoJsonSerializer(result1).toJson();
     System.out.println(geoJson1);
+    System.out.println("-----------");
 
     String geoJson2 = new GeoJsonSerializer(result2).toJson();
     System.out.println(geoJson2);
 
-    System.out.println(result1.cost());
-    System.out.println(result2.cost());
+    System.out.println("Heuristic Cost 0: " + Math.round(result0.getCost()));
+    System.out.println("Heuristic Cost 1: " + Math.round(result1.getCost()));
+    System.out.println("Heuristic Cost 2: " + Math.round(result2.getCost()));
   }
 }

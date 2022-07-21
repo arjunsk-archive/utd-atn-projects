@@ -177,7 +177,7 @@ public class Graph {
     return result;
   }
 
-  public Double cost() {
+  public Double getCost() {
     double total = 0;
     for (Edge edge : getEdges()) {
       total += edge.getDistance();

@@ -39,7 +39,7 @@ public class HeuristicsAlgo1 {
       this.graph = newGraph;
     }
 
-    System.out.println(numberOfEdgeRemovals);
+    //    System.out.println(numberOfEdgeRemovals);
     return this.graph;
   }
 }
