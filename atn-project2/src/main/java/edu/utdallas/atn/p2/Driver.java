@@ -43,7 +43,7 @@ public class Driver {
     String geoJson2 = new GeoJsonSerializer(result2).toJson();
     System.out.println(geoJson2);
 
-    System.out.println("Heuristic Cost 0: " + Math.round(result0.getCost()));
+    System.out.println("Complete Graph Cost 0: " + Math.round(result0.getCost()));
     System.out.println("Heuristic Cost 1: " + Math.round(result1.getCost()));
     System.out.println("Heuristic Cost 2: " + Math.round(result2.getCost()));
   }

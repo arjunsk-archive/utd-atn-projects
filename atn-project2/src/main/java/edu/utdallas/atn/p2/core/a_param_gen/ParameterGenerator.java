@@ -3,9 +3,7 @@ package edu.utdallas.atn.p2.core.a_param_gen;
 import edu.utdallas.atn.p2.domain.Point;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class ParameterGenerator {

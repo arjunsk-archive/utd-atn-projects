@@ -7,9 +7,7 @@
     <list default="true" id="f361530c-8411-41af-922f-5bd634bcfd11" name="Changes" comment="Partial HeuristicsAlgo2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/b_algos/HeuristicsAlgo2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/domain/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/domain/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/a_param_gen/ParameterGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/atn-project2/src/main/java/edu/utdallas/atn/p2/core/a_param_gen/ParameterGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +69,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "build.tools"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -176,7 +174,8 @@
       <workItem from="1658207380722" duration="16829000" />
       <workItem from="1658264467741" duration="20631000" />
       <workItem from="1658289966921" duration="5426000" />
-      <workItem from="1658336252732" duration="11119000" />
+      <workItem from="1658336252732" duration="14850000" />
+      <workItem from="1658700405442" duration="42000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1658207703258</created>
@@ -367,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658296243468</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Partial HeuristicsAlgo2">
+      <created>1658364614423</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1658364614423</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
